@@ -6,7 +6,7 @@
           <i class="el-icon-s-data"></i>
           灵活用工服务平台
         </div>
-        <el-menu default-active="2" class="el-menu-vertical-demo" router>
+        <el-menu default-active="1" class="el-menu-vertical-demo" router active-text-color="#344c8d">
           <p class="text-p">常用服务</p>
           <el-menu-item index="/">
             <i class="el-icon-monitor"></i>
@@ -18,30 +18,42 @@
               <i class="el-icon-s-order"></i>
               <span>项目任务</span>
             </template>
-            <el-menu-item index="/newIndent">选项1</el-menu-item>
-            <el-menu-item index="1-2">选项2</el-menu-item>
-            <el-menu-item index="1-3">选项3</el-menu-item>
-            <el-menu-item index="1-4">选项4</el-menu-item>
+            <el-menu-item index="/newIndent">
+              <i class="el-icon-arrow-right"></i>
+              <span>批量新建订单</span>
+            </el-menu-item>
+            <el-menu-item index="1-2">
+              <i class="el-icon-arrow-right"></i>
+              <span>项目列表</span>
+            </el-menu-item>
+            <el-menu-item index="1-3">
+              <i class="el-icon-arrow-right"></i>
+              <span>任务派单</span>
+            </el-menu-item>
+            <el-menu-item index="1-4">
+              <i class="el-icon-arrow-right"></i>
+              <span>订单列表</span>
+            </el-menu-item>
           </el-submenu>
           <el-submenu index="3">
             <template slot="title">
               <i class="el-icon-s-finance"></i>
               <span>资金发票</span>
             </template>
-            <el-menu-item index="/newIndent">选项1</el-menu-item>
-            <el-menu-item index="1-2">选项2</el-menu-item>
-            <el-menu-item index="1-3">选项3</el-menu-item>
-            <el-menu-item index="1-4">选项4</el-menu-item>
+            <el-menu-item index="2-1">选项1</el-menu-item>
+            <el-menu-item index="2-2">选项2</el-menu-item>
+            <el-menu-item index="2-3">选项3</el-menu-item>
+            <el-menu-item index="2-4">选项4</el-menu-item>
           </el-submenu>
           <el-submenu index="4">
             <template slot="title">
               <i class="el-icon-office-building"></i>
               <span>企业管理</span>
             </template>
-            <el-menu-item index="/newIndent">选项1</el-menu-item>
-            <el-menu-item index="1-2">选项2</el-menu-item>
-            <el-menu-item index="1-3">选项3</el-menu-item>
-            <el-menu-item index="1-4">选项4</el-menu-item>
+            <el-menu-item index="3-1">选项1</el-menu-item>
+            <el-menu-item index="3-2">选项2</el-menu-item>
+            <el-menu-item index="3-3">选项3</el-menu-item>
+            <el-menu-item index="3-4">选项4</el-menu-item>
           </el-submenu>
           <p class="text-p">服务中心</p>
           <el-submenu index="5">
@@ -49,10 +61,10 @@
               <i class="el-icon-s-custom"></i>
               <span>身份&安全</span>
             </template>
-            <el-menu-item index="/newIndent">选项1</el-menu-item>
-            <el-menu-item index="1-2">选项2</el-menu-item>
-            <el-menu-item index="1-3">选项3</el-menu-item>
-            <el-menu-item index="1-4">选项4</el-menu-item>
+            <el-menu-item index="4-1">选项1</el-menu-item>
+            <el-menu-item index="4-2">选项2</el-menu-item>
+            <el-menu-item index="4-3">选项3</el-menu-item>
+            <el-menu-item index="4-4">选项4</el-menu-item>
           </el-submenu>
         </el-menu>
       </div>
@@ -85,35 +97,53 @@ export default {
 </script>
 
 <style>
+.el-menu-item {
+  font-weight: bold;
+}
+
 #rig {
   background-color: #f5f5f5;
 }
 
-.app,.app>.el-col {
+.app,
+.app>.el-col {
   height: 100vh;
 }
+
 .el-menu {
   width: 100%;
   border: none;
 }
+
 * {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.content-lef,.content-lefSmall {
+.content-lef .text-p {
+  margin: 10px 20px 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #95919f;
+}
+
+.content-lef,
+.content-lefSmall {
   height: 100%;
   background-color: #fff;
 }
-.content-lefSmall{
+
+.content-lefSmall {
   display: none;
 }
-@media screen and (max-width: 1200px){
-  .content-lef{
+
+@media screen and (max-width: 1200px) {
+  .content-lef {
     display: none;
   }
-  .content-lefSmall{
+
+  .content-lefSmall {
     display: block;
   }
 }
@@ -122,7 +152,7 @@ export default {
   min-width: 0 !important;
 }
 
-.title {
+.content-lef .title {
   width: 100%;
   height: 60px;
   text-align: center;
@@ -132,6 +162,7 @@ export default {
   background-color: #d0121b;
   color: #fff;
 }
+
 .title-rig {
   width: 100%;
   display: flex;
@@ -144,6 +175,7 @@ export default {
   justify-content: space-between;
 
 }
+
 .title-rig div {
   display: flex;
   align-items: center;

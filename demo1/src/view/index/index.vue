@@ -381,7 +381,7 @@ a{
 }
 
 .index-box {
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
 .index-box .el-col {
